@@ -2,6 +2,10 @@ import { Router, Request, Response } from 'express';
 import { User } from '../models/user.js';
 import jwt from 'jsonwebtoken';
 import bcrypt from 'bcrypt';
+import dotenv from 'dotenv';
+
+dotenv.config();
+
 
 export const login = async (req: Request, res: Response) => {
   const { username, password } = req.body;
@@ -9,18 +13,19 @@ export const login = async (req: Request, res: Response) => {
   try {
     const user = await User.findOne({ where: { username } });
     if (!user) {
-      return res.status(401).json({ message: 'Invalid username or password' });
+      return res.status(401).json({ message: 'Invalid username or password: User not found' });
     }
 
     const isPasswordValid = await bcrypt.compare(password, user.password);
     if (!isPasswordValid) {
-      return res.status(401).json({ message: 'Invalid username or password' });
+      return res.status(401).json({ message: 'Invalid username or password: Incorrect password' });
     }
 
-    const token = jwt.sign({ userId: user.id }, 'your_jwt_secret', { expiresIn: '1h' });
-    res.json({ token });
+    const token = jwt.sign({ userId: user.id }, process.env.ACCESS_TOKEN_SECRET as string, { expiresIn: '1h' });
+    return res.json({ token });
   } catch (error) {
-    res.status(500).json({ message: 'Internal server error' });
+    console.error('Internal server error:', error);
+    return res.status(500).json({ message: 'Internal server error' });
   }
 };
 
