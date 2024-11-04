@@ -31,8 +31,8 @@ Prerequisites
 ## Installation
 1. Clone the repository:
 
- git clone https://github.com/Tavinsowell/kanban-board.git
- cd Develop
+-  git clone https://github.com/Tavinsowell/kanban-board.git
+-  cd Develop
 
 2. Install dependencies for both client and server:
 
