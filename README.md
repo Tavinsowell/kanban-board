@@ -64,7 +64,7 @@ Prerequisites
 
 
 ### Usage
-there is three test login that you can use for testing the app they are:
+there is three test logins that you can use for testing the app they are:
 
 - username: 'JollyGuru', password: 'password' 
 - username: 'SunnyScribe', password: 'password' 
