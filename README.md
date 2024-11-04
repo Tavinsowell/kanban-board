@@ -64,6 +64,11 @@ Prerequisites
 
 
 ### Usage
+there is three test login that you can use for testing the app they are:
+
+- username: 'JollyGuru', password: 'password' 
+- username: 'SunnyScribe', password: 'password' 
+- username: 'RadiantComet', password: 'password' 
 
  - Login: Use the login form to authenticate.
  - Create Task: Click on "New Ticket" to create a new task.
