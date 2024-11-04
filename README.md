@@ -11,18 +11,18 @@ Kanban Board is a web application designed to help teams manage their tasks and 
 ## Technologies Used
 - Frontend:
 
- - - React
- - - TypeScript
- - - Vite
- - - React Router
- - - CSS
+  - React
+  - TypeScript
+  - Vite
+  - React Router
+  - CSS
 - Backend:
 
- - - Node.js
- - - Express
- - - Sequelize (ORM)
- - - PostgreSQL
- - - JWT for authentication
+  - Node.js
+  - Express
+  - Sequelize (ORM)
+  - PostgreSQL
+  - JWT for authentication
 ## Getting Started
 Prerequisites
 - Node.js
