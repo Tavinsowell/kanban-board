@@ -36,27 +36,27 @@ Prerequisites
 
 2. Install dependencies for both client and server:
 
- npm i
- npm run install
+ - npm i
+ - npm run install
 
 3. Set up the PostgreSQL database:
- psql -U postgres
- CREATE DATABASE kanban_db;
+ - psql -U postgres
+ - CREATE DATABASE kanban_db;
 4. Configure environment variables: Create a .env file in the server directory with the following content:
 
- DB_NAME='kanban_db'
- DB_USER='postgres'
- DB_PASSWORD='yourpassword'
- JWT_SECRET_KEY='yourjwtsecret'
- ACCESS_TOKEN_SECRET='youraccesstokensecret'
+ - DB_NAME='kanban_db'
+ - DB_USER='postgres'
+ - DB_PASSWORD='yourpassword'
+ - JWT_SECRET_KEY='yourjwtsecret'
+ - ACCESS_TOKEN_SECRET='youraccesstokensecret'
 
 5. Seed the database:
- npm run seed
+ - npm run seed
 
 
 ## Running the Application
 1. Start the development server:
- npm run start:dev
+ - npm run start:dev
 
 
 2. Open your browser and navigate to http://localhost:3000.
